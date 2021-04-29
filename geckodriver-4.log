@@ -1,0 +1,14 @@
+1619688147439	geckodriver	INFO	Listening on 127.0.0.1:50021
+1619688150462	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Kalle\\AppData\\Local\\Temp\\rust_mozprofileX12eOs"
+1619688151114	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+1619688152459	Marionette	INFO	Listening on port 50029
+1619688152580	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://img4.wsimg.com/starfield/duel/v2.5.7/duel.js?appid=O3BkA5J1#TzNCa0E1SjF2Mi41Ljdwcm9k, line 2: Error: Syntax or http error: https://img4.wsimg.com/wst/v7/WSB7_J_20150617_0953_WSB-Desig_7030/v2/common/cookiemanager/cookiemanager.js
+JavaScript error: http://img4.wsimg.com/starfield/duel/v2.5.7/duel.js?appid=O3BkA5J1#TzNCa0E1SjF2Mi41Ljdwcm9k, line 2: Error: Syntax or http error: https://img4.wsimg.com/wst/v7/WSB7_J_20150617_0953_WSB-Desig_7030/v2/designer/social/share/social.share.js
+1619688168674	Marionette	INFO	Stopped listening on port 50029
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
