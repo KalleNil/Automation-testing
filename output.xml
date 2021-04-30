@@ -1,89 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.1 (Python 3.8.0 on win32)" generated="20210429 13:53:55.463" rpa="false" schemaversion="2">
-<suite id="s1" name="mouseOperations" source="C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\TestCases\mouseOperations.robot">
-<test id="s1-t1" name="MouseActions">
-<kw name="rightClickAction">
+<robot generator="Robot 4.0.1 (Python 3.8.0 on win32)" generated="20210430 04:25:19.751" rpa="false" schemaversion="2">
+<suite id="s1" name="inputBox" source="C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\TestCases\inputBox.robot">
+<test id="s1-t1" name="TestingInputBox">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url1}</arg>
+<arg>${url}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210429 13:53:55.700" level="INFO">Opening browser 'firefox' to base url 'https://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
-<msg timestamp="20210429 13:53:55.704" level="INFO">Firefox driver log is always forced to to: C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\geckodriver-38.log</msg>
-<status status="PASS" starttime="20210429 13:53:55.700" endtime="20210429 13:54:01.390"/>
+<msg timestamp="20210430 04:25:19.975" level="INFO">Opening browser 'firefox' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg timestamp="20210430 04:25:19.982" level="INFO">Firefox driver log is always forced to to: C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\geckodriver-59.log</msg>
+<status status="PASS" starttime="20210430 04:25:19.975" endtime="20210430 04:25:27.778"/>
 </kw>
-<kw name="Open Context Menu" library="SeleniumLibrary">
-<arg>xpath://span[@class='context-menu-one btn btn-neutral']</arg>
-<doc>Opens the context menu on the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20210429 13:54:01.390" endtime="20210429 13:54:01.710"/>
+<kw name="TextFieldCheck">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210430 04:25:27.779" endtime="20210430 04:25:28.047"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>nopCommerce demo store</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210430 04:25:28.050" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20210430 04:25:28.047" endtime="20210430 04:25:28.050"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[@class='ico-login']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210430 04:25:28.050" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20210430 04:25:28.050" endtime="20210430 04:25:29.223"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${email_txt}</var>
+<arg>xpath://input[@id='Email']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210430 04:25:29.224" level="INFO">${email_txt} = xpath://input[@id='Email']</msg>
+<status status="PASS" starttime="20210430 04:25:29.223" endtime="20210430 04:25:29.224"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${email_txt}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210430 04:25:29.253" level="INFO">Element 'xpath://input[@id='Email']' is displayed.</msg>
+<status status="PASS" starttime="20210430 04:25:29.224" endtime="20210430 04:25:29.253"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${email_txt}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210430 04:25:29.253" endtime="20210430 04:25:29.268"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_txt}</arg>
+<arg>kd3180@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210430 04:25:29.269" level="INFO">Typing text 'kd3180@hotmail.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20210430 04:25:29.268" endtime="20210430 04:25:29.291"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210429 13:54:04.710" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210429 13:54:01.710" endtime="20210429 13:54:04.710"/>
+<msg timestamp="20210430 04:25:32.291" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210430 04:25:29.291" endtime="20210430 04:25:32.291"/>
 </kw>
-<status status="PASS" starttime="20210429 13:53:55.700" endtime="20210429 13:54:04.710"/>
-</kw>
-<kw name="doubleClickAction">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url2}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210429 13:54:04.711" level="INFO">Opening browser 'firefox' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
-<msg timestamp="20210429 13:54:04.715" level="INFO">Firefox driver log is always forced to to: C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\geckodriver-39.log</msg>
-<status status="PASS" starttime="20210429 13:54:04.711" endtime="20210429 13:54:15.289"/>
-</kw>
-<kw name="Double Click Element" library="SeleniumLibrary">
-<arg>xpath://button[contains(text(), 'Copy Text')]</arg>
-<doc>Double clicks the element identified by ``locator``.</doc>
-<msg timestamp="20210429 13:54:15.289" level="INFO">Double clicking element 'xpath://button[contains(text(), 'Copy Text')]'.</msg>
-<status status="PASS" starttime="20210429 13:54:15.289" endtime="20210429 13:54:15.591"/>
-</kw>
-<status status="PASS" starttime="20210429 13:54:04.710" endtime="20210429 13:54:15.591"/>
-</kw>
-<kw name="dragDropAction">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url3}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210429 13:54:15.592" level="INFO">Opening browser 'firefox' to base url 'http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html'.</msg>
-<msg timestamp="20210429 13:54:15.597" level="INFO">Firefox driver log is always forced to to: C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\geckodriver-40.log</msg>
-<status status="PASS" starttime="20210429 13:54:15.592" endtime="20210429 13:54:23.949"/>
-</kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>id:box2</arg>
-<arg>id:box102</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20210429 13:54:23.949" endtime="20210429 13:54:24.487"/>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${email_txt}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20210430 04:25:32.291" endtime="20210430 04:25:32.300"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20210429 13:54:27.489" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20210429 13:54:24.488" endtime="20210429 13:54:27.489"/>
+<msg timestamp="20210430 04:25:35.300" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210430 04:25:32.300" endtime="20210430 04:25:35.300"/>
 </kw>
-<status status="PASS" starttime="20210429 13:54:15.592" endtime="20210429 13:54:27.489"/>
+<status status="PASS" starttime="20210430 04:25:27.779" endtime="20210430 04:25:35.300"/>
 </kw>
-<kw name="dragDropAction2">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url2}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210429 13:54:27.491" level="INFO">Opening browser 'firefox' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
-<msg timestamp="20210429 13:54:27.494" level="INFO">Firefox driver log is always forced to to: C:\Users\Kalle\PycharmProjects\studentsRobotSelenium\geckodriver-41.log</msg>
-<status status="PASS" starttime="20210429 13:54:27.491" endtime="20210429 13:54:37.642"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210430 04:25:35.300" endtime="20210430 04:25:35.729"/>
 </kw>
-<kw name="Drag And Drop" library="SeleniumLibrary">
-<arg>id:draggable</arg>
-<arg>id:droppable</arg>
-<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
-<status status="PASS" starttime="20210429 13:54:37.642" endtime="20210429 13:54:38.213"/>
-</kw>
-<status status="PASS" starttime="20210429 13:54:27.490" endtime="20210429 13:54:38.213"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20210429 13:54:38.213" endtime="20210429 13:54:40.195"/>
-</kw>
-<status status="PASS" starttime="20210429 13:53:55.699" endtime="20210429 13:54:40.195"/>
+<status status="PASS" starttime="20210430 04:25:19.974" endtime="20210430 04:25:35.729"/>
 </test>
-<status status="PASS" starttime="20210429 13:53:55.465" endtime="20210429 13:54:40.197"/>
+<status status="PASS" starttime="20210430 04:25:19.752" endtime="20210430 04:25:35.731"/>
 </suite>
 <statistics>
 <total>
@@ -92,7 +85,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="mouseOperations">mouseOperations</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="inputBox">inputBox</stat>
 </suite>
 </statistics>
 <errors>
